@@ -1,0 +1,355 @@
+         #to know number is positive ,negative or zero
+a=int(input("enter any number:::"))
+if (a>0):
+    print("the number is positive")
+elif (a==0):
+    print("the number zero")
+else:
+    print("the number is negative")
+
+#--------------------------------------------------------------------------
+         #fibonacci series using while loop
+a=int(input("how many numbers"))
+n1=0
+n2=1
+count=0
+if (a<=0):
+    print("please select a positive number")
+elif (a==1):
+    print(n1)
+else:
+    while (count<a):
+        count=count+1
+        nth=n1+n2
+        n1=n2
+        n2=nth
+        print(n1)
+
+#---------------------------------------------------------------------------
+            #sum of digits of a number
+
+a=int(input("enter any number to get the sum:::"))
+#user input
+tot=0
+#initialize a variable with a value which is generally 0 in case of while loop
+while (a>0):
+#while loop (always avariable in the left side and a value in the right side)
+    dig=a%10
+#split the value of a in tens
+    tot=tot+dig
+#apply the operation on the splitted dig
+    a=a//10
+#to avoid the infinite loop use the floor value to the user input
+    print("the sum of the given number is::",tot)
+#print the result
+
+#------------------------------------------------------------------------------------------
+
+    #MAP to reverse the given number,,(patteren program)
+
+n=int(input("enter any number to get the reverse:::"))
+rev=0
+while(n>0):
+    splt=n%10
+    rev=splt
+    n=n//10
+    print("the reverse value is::::",rev)
+
+#------------------------------------------------------------------------------
+         #largest number among six numbers
+a=input("enter your 1st number")
+b=input("enter your 2nd number")
+c=input("enter your 3rd number")
+d=input("enter your 4th number")
+e=input("enter your 5th number")
+f=input("enter your 6th number") 
+if(a>b) and (a>c) and (a>d) and (a>e) and (a>f):
+    print(a)
+elif (b>a)and (b>c)and (b>d)and (b>e) and (a>f):
+    print(b)
+elif (c>a)and (c>b)and (c>d)and (c>e) and (c>f): 
+    print(c)
+elif (d>a)and (d>b)and (d>c)and (d>e) and (d>f):
+    print(d)
+elif (e>a)and (e>b)and (e>c)and (e>d) and (e>f):
+    print(e)
+elif (f>a)and (f>b)and (f>c)and (f>d) and (f>e):
+    print(f)
+else:
+    print("two numbers are same")
+
+#---------------------------------------------------------------------------
+
+      #program to find the maximum element in an array
+arr=[1,85,44,22,33,77,12]     
+     
+#Initialize max with first element of array.    
+maxi = arr[0];    
+     
+#Loop through the array    
+for i in range(len(arr)):    
+    #Compare elements of array with max    
+   if(arr[i] > maxi):    
+       maxi = arr[i];    
+           
+print("Largest element present in given array: ",str(maxi))
+
+#-------------------------------------------------------------------------------
+
+       #program to find the minimum element in the arrray
+arr = [22,55,77,33]
+mini = arr[0];
+for i in range (0,len(arr)):
+    if (arr[i] < mini):
+        mini = arr[i];
+        print("the minimum element is", str(mini))
+    else:
+        print(arr[0])
+
+#--------------------------------------------------------------------------------------------
+
+         #addition of the array elements
+arr=[1,2,3,4,5]
+ad=0
+for i in range(0,len(arr)):
+    ad=ad+arr[i]
+    print(ad)
+
+#-------------------------------------------------------------------------------------------------
+         #reverse the array
+arr=[1,2,3,4,5]
+for i in range(0,len(arr)):
+    b=arr[::-1]
+    print(b)
+    
+   
+#-------------------------------------------------------------------------------------------------
+    
+  #minimum number of notes required
+amt=int(input("enter any ammount\n"))
+note500=note200=note100=note50=0
+if (amt>=500):
+    note500=amt//500
+    amt=amt-note500*500
+    print("required 500 notes",note500)
+if (amt>=200):
+    note200=amt//200
+    amt=amt-note200*200
+    print("required 200 notes",note200)
+if (amt>=100):
+    note100=amt//100
+    amt=amt-note100*100
+    print("required 100 notes",note100) 
+if (amt>=50):
+    note50=amt//50
+    amt=amt-note50*50
+    print("required 50 notes",note50)
+
+#-------------------------------------------------------------------------------------------
+
+    #for all triangle shaped patteren printiing
+
+i=1
+while(i<=5):
+    j=1
+    while(j<=i):
+        print("*",end="")# try and see the output by replecing i with j and i with *..
+        j=j+1
+    print()
+    i=i+1
+
+ #-------------------------------------------------------------------------
+     #print n numbers
+a=int(input("enter the value upto which you want to print"))
+i=0
+while(i<=a):
+    print(i)
+    i=i+1
+
+#-------------------------------------------------------------------------------
+
+     #print n numbers in reverse order
+a=int(input("enter any number to print in reverse order"))
+while(a>=1):
+    print(a)
+    a=a-1
+
+#--------------------------------------------------------------------------------
+
+     #sum of numbers from 1 to n:
+n=int(input("enter numbers up to which you want the sum"))
+i=1
+sum=0 # we have to take a varible and assign such value to it so it do not change the result
+            #after operation .
+while(n>=i):
+    sum=sum+i
+    i=i+1
+print("the sum is:",sum)
+
+#------------------------------------------------------------------------------------
+
+      #program to find sum of square from 1 to n.
+a=int(input("enter any number::"))
+i=1
+sum=0
+while(a>=i):
+    sum=sum+(i*i)
+    i=i+1
+print("sum is::" ,sum)
+
+#-----------------------------------------------------------------------------------------
+
+#18           program to print even numbers:
+a=int(input("enter any number up tto you want to print::"))
+i=2
+while(i<=a):
+    print(i)
+    i=i+2
+
+
+#------------------------------------------------------------------------------
+    #python program to find the sum of even numbers from 1 to n
+
+a=int(input("enter any number:: "))
+sum=0
+i=2
+while(a>=i):
+   sum=sum+i
+   i=i+2
+   #sum=sum+2
+print("sum of even numbers is :: ",sum)
+
+#----------------------------------------------------------------------------
+
+#22          program to find the sum of square of digits of a given number::::
+a=int(input("enter any number :: "))
+sum=0
+i=1
+while(a>=i):
+    sum=sum+a%10*a%10
+    a=a//10
+print("the sum of square of digits is:: ",sum)
+    
+
+#-------------------------------------------------------------------------------
+
+#23          program to find the sum of cube of digits of a given number::::
+a=int(input("enter any number :: "))
+sum=0
+i=1
+while(a>=i):
+    sum=sum+(a%10)*(a%10)*(a%10)
+    a=a//10
+print("the sum of square of digits is:: ",sum)
+
+#-----------------------------------------------------------------------------
+
+ #25 ...find the product of the digits of a number
+a=int(input("enter any number :: "))
+pro=1
+i=1
+while(a>=i):
+    pro=pro*(a%10)
+    a=a//10
+print("the result is:: ",pro)
+
+#=------------------------------------------------------------------------------
+
+ #25 .. number to know wheater it is an armstrong number or not
+a=int(input("enter any number to know wheater it is an armstrong number or not : "))
+p=a # we must have to vopy the user input in another variable to compare it later in if statement.
+i=1
+sum=0
+while(a>=i):
+    sum=sum+(a%10)*(a%10)*(a%10)
+    a=a//10
+#print("the cube of the digits of number is: ",sum)
+if p==sum:
+    print("the number you entered is armstrong number")
+else:
+    print("the number you entered not an armstrong number")
+
+#-----------------------------------------------------------------------------
+
+     #  to check number is pallindrome or not
+a=int(input("enter any number:  "))
+s=a #copy a input number(necessary)
+i=1
+g=0
+while(i<=a):
+    g=(g*10)+a%10
+    a=a//10
+print(g)
+if s==g:
+    print("palindrome number")
+else:
+    print("not pallindrome")
+
+#--------------------------------------------------------------------------------------------
+
+     #to check wheather a number is prime or not
+
+a=int(input("eneter any number"))
+i=1
+count=0
+while(i<=a):
+    if(a%i==0):
+        count=count+1
+    i=i+1
+if(count==2):
+    print("prime number")
+else:
+    print("composite number")
+
+
+#----------------------------------------------------------------------------------
+#  factorial program
+
+a=int(input("enter any value:: "))
+i=1
+pro=1
+while(a>=1):
+    pro=(pro*a)
+    a=a-1
+print(pro)
+
+#--------------------------------------------------------------------------------------
+
+# fibonaci sequence::
+
+a=int(input("enter any number:: "))
+x=0
+y=1
+#while(a>=z):
+   print(z)
+    x=y
+    y=z
+    z=x+y
+
+#--------------------------------------------------------------------------------------
+#To print the patteren in the form of right angled triangle whose hypyonuse is o
+#left side
+i=1
+while(i<=6):
+    b=1
+    while(b<=6-i):
+        print(" ",end="")
+        b=b+1
+    j=1
+    while(j<=i):
+        print("*",end="")
+        j=j+1
+    print()
+    i=i+1
+
+
+
+
+    
+
+      
+
+
+
+
+
